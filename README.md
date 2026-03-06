@@ -12,3 +12,10 @@ Sistem perbankan berbasis CLI yang menerapkan enkapsulasi, komposisi class, dan 
 1. **Deposit**: Minimal harus positif.
 2. **Withdraw**: Tidak bisa melebihi saldo.
 3. **PIN**: Wajib 6 digit angka.
+
+## Hasil Running Program
+**Catatan**: Gambar running program di bawah ini digenerate lewat fitur print pada terminal intellij IDE.
+
+<img src="assets/running01.png" width="400">
+<img src="assets/running02.png" width="400">
+<img src="assets/running03.png" width="400">
