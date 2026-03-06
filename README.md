@@ -19,3 +19,7 @@ Sistem perbankan berbasis CLI yang menerapkan enkapsulasi, komposisi class, dan 
 <img src="assets/running01.png" width="400">
 <img src="assets/running02.png" width="400">
 <img src="assets/running03.png" width="400">
+
+## Abstraksi Diagram Kelas
+**Catatan**: Tool yang digunakan untuk desain _class diagram_ di bawah ini adalah plantUML.
+<img src="assets/DiagramKelas.png" width="400">

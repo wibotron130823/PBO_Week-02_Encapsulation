@@ -1,0 +1,48 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Customer {
+  - name: String
+  - nik: String
+  + Customer(name: String, nik: String)
+  + getName(): String
+}
+
+class Transaction {
+  - type: String
+  - amount: double
+  - timestamp: LocalDateTime
+  + Transaction(type: String, amount: double)
+  + display(): void
+}
+
+class Account {
+  - accountNumber: String
+  - balance: double
+  - pin: String
+  - owner: Customer
+  - history: List<Transaction>
+  + Account()
+  + Account(accountNumber: String, owner: Customer)
+  + deposit(amount: double): void
+  + withdraw(amount: double): void
+  + setPin(pin: String): void
+  + getBalance(): double
+  + printHistory(): void
+}
+
+class BankApp {
+  + main(args: String[]): void
+  - printMenu(): void
+  - handleDeposit(sc: Scanner, acc: Account): void
+  - handleWithdraw(sc: Scanner, acc: Account): void
+  - showAccountInfo(acc: Account): void
+}
+
+Account "1" *-- "0..*" Transaction : memiliki >
+Account "1" --> "1" Customer : dimiliki oleh >
+BankApp ..> Account : <<use>>
+BankApp ..> Customer : <<use>>
+
+@enduml
